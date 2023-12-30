@@ -170,7 +170,7 @@ mkdir -p ./junest-backups/usr/share
 # STEP 2, FUNCTION TO SAVE THE BINARIES IN /usr/bin THAT ARE NEEDED TO MADE JUNEST WORK, PLUS THE MAIN BINARY/BINARIES OF THE APP
 # IF YOU NEED TO SAVE MORE BINARIES, LIST THEM IN THE "BINSAVED" VARIABLE. COMMENT THE LINE "_savebins" IF YOU ARE NOT SURE.
 _savebins(){
-	BINSAVED="SAVEBINSPLEASE"
+	BINSAVED="python"
 	mkdir save
 	mv ./$APP.AppDir/.junest/usr/bin/*$BIN* ./save/
 	mv ./$APP.AppDir/.junest/usr/bin/bash ./save/
@@ -222,7 +222,7 @@ _include_swrast_dri(){
 }
 
 _libkeywords(){
-	LIBSAVED="libgpg-error" # Enter here keywords or file/folder names to save in /usr/lib.
+	LIBSAVED="girepository libgpg-error libpeas pkgconfig python" # Enter here keywords or file/folder names to save in /usr/lib.
 	for arg in $LIBSAVED; do
 		for var in $arg; do
  			mv ./$APP.AppDir/.junest/usr/lib/*"$arg"* ./save/
@@ -318,4 +318,4 @@ mkdir -p ./$APP.AppDir/.junest/media
 
 # CREATE THE APPIMAGE
 ARCH=x86_64 ./appimagetool -n ./$APP.AppDir
-mv ./*AppImage ./"$(cat ./$APP.AppDir/*.desktop | grep 'Name=' | head -1 | cut -c 6- | sed 's/ /-/g')"_"$VERSION""$VERSIONAUR"-archimage2.1-4-x86_64.AppImage
+mv ./*AppImage ./"$(cat ./$APP.AppDir/*.desktop | grep 'Name=' | head -1 | cut -c 6- | sed 's/ /-/g')"_with-plugins_"$VERSION""$VERSIONAUR"-archimage2.1-4-x86_64.AppImage
