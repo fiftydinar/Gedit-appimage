@@ -3,7 +3,7 @@
 # NAME OF THE APP BY REPLACING "SAMPLE"
 APP=gedit
 BIN="$APP" #CHANGE THIS IF THE NAME OF THE BINARY IS DIFFERENT FROM "$APP" (for example, the binary of "obs-studio" is "obs")
-DEPENDENCES="gsettings-desktop-schemas gspell libgedit-amtk libpeas python-gobject tepl"
+DEPENDENCES="gsettings-desktop-schemas gspell libgedit-amtk libpeas python-gobject tepl gedit-plugins"
 #BASICSTUFF="binutils gzip"
 #COMPILERS="gcc"
 
