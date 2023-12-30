@@ -3,7 +3,7 @@
 # NAME OF THE APP BY REPLACING "SAMPLE"
 APP=gedit
 BIN="$APP" #CHANGE THIS IF THE NAME OF THE BINARY IS DIFFERENT FROM "$APP" (for example, the binary of "obs-studio" is "obs")
-DEPENDENCES="gsettings-desktop-schemas gspell libgedit-amtk libpeas python-gobject tepl gedit-plugins"
+DEPENDENCES="gsettings-desktop-schemas gspell libgedit-amtk libpeas python-gobject tepl"
 #BASICSTUFF="binutils gzip"
 #COMPILERS="gcc"
 
@@ -170,7 +170,7 @@ mkdir -p ./junest-backups/usr/share
 # STEP 2, FUNCTION TO SAVE THE BINARIES IN /usr/bin THAT ARE NEEDED TO MADE JUNEST WORK, PLUS THE MAIN BINARY/BINARIES OF THE APP
 # IF YOU NEED TO SAVE MORE BINARIES, LIST THEM IN THE "BINSAVED" VARIABLE. COMMENT THE LINE "_savebins" IF YOU ARE NOT SURE.
 _savebins(){
-	BINSAVED="python"
+	BINSAVED="SAVEBINSPLEASE"
 	mkdir save
 	mv ./$APP.AppDir/.junest/usr/bin/*$BIN* ./save/
 	mv ./$APP.AppDir/.junest/usr/bin/bash ./save/
@@ -222,7 +222,7 @@ _include_swrast_dri(){
 }
 
 _libkeywords(){
-	LIBSAVED="libgpg-error python" # Enter here keywords or file/folder names to save in /usr/lib.
+	LIBSAVED="libgpg-error" # Enter here keywords or file/folder names to save in /usr/lib.
 	for arg in $LIBSAVED; do
 		for var in $arg; do
  			mv ./$APP.AppDir/.junest/usr/lib/*"$arg"* ./save/
