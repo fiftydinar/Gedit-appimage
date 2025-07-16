@@ -1,2 +1,1 @@
-https://github.com/ivan-hc/Gedit-appimage/releases/download/continuous/gedit_48.2-1-archimage4.3-x86_64.AppImage
-Tue Jul 15 01:02:35 UTC 2025
+Wed Jul 16 01:01:29 UTC 2025
